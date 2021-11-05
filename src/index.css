@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 12px;
+    --orange-bc: #FEEBDC;
+    --orange-lg: #FFA45B;
+    --orange-dr: #FB760D;
+    --orange-cm: #25414C;
+}
+
+.App {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--orange-bc);
+}
+
+main {
+    width: 45%;
+    margin: 0 auto 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+header #slash {
+    width: 200px;
+    height: 5px;
+    background-color: blue;
+}
+
+.card {
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cardimage {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.detail {
+    padding: 20px 20px 0;
+}
+
+.detail .updetail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.detail .price {
+    color: green;
+}
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.div-btn .btn {
+    width: 200px;
+    height: 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--orange-cm);
+}
+
+.readmore {
+    cursor: pointer;
+    color: blue;
+}

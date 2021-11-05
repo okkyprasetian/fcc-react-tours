@@ -1,6 +1,9 @@
 function Header() {
     return (
-        <h1>Our Tours</h1>
+        <header>
+            <h1>Our Tours</h1>
+            <div id="slash"></div>
+        </header>
     );
 }
 

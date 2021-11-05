@@ -16,17 +16,19 @@ function Card({ tour, onDeleteTour }) {
             <div>
                 <img className="cardimage" src={tour.image} alt="" />
             </div>
-            <div>
-                <h2>{tour.name}</h2>
-                <p>{tour.price}</p>
+            <div className="detail">
+                <div className="updetail">
+                    <h2>{tour.name}</h2>
+                    <p className="price">$ {tour.price}</p>
+                </div>
                 <p>
-                    {readmore ? tour.info : tour.info.split(' ').slice(0, 30).join(' ')}
-                    {!readmore && ' ... '}
+                    {readmore ? tour.info : tour.info.slice(0, 200)}
+                    {!readmore && '... '}
                     <span onClick={toggleRead} className="readmore">{readmore ? 'Readless' : 'Read More'}</span>
                 </p>
-                <div className="div-btn">
-                    <Button onDeleteTour={onDeleteTour} tId={tour.id} />
-                </div>
+            </div>
+            <div className="div-btn">
+                <Button onDeleteTour={onDeleteTour} tId={tour.id} />
             </div>
         </div>
     );
