@@ -1,6 +1,6 @@
-function Button() {
+function Button({ onDeleteTour, tId }) {
     return (
-        <button>
+        <button className="btn" onClick={() => onDeleteTour(tId)}>
             Not interested
         </button>
     );

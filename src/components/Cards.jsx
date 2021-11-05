@@ -1,9 +1,9 @@
 import Card from "./Card"
 
-function Cards({ tourLs }) {
+function Cards({ tourLs, onDeleteTour }) {
     return (
         <div className="cards">
-            {tourLs.map(tour => <Card id={tour.id} tour={tour} />)}
+            {tourLs.map(tour => <Card key={tour.id} tour={tour} onDeleteTour={onDeleteTour} />)}
         </div>
     );
 }
