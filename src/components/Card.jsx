@@ -1,13 +1,17 @@
 import Button from "./Button"
 
-function Card() {
+function Card({ tour }) {
     return (
         <div className="card">
-            <h3>IMAGE</h3>
-            <p>Best of Paris</p>
-            <p>$2000</p>
-            <p>blablabla</p>
-            <Button />
+            <div>
+                <img className="cardimage" src={tour.image} alt="" />
+            </div>
+            <div>
+                <h2>{tour.name}</h2>
+                <p>{tour.price}</p>
+                <p>{tour.info}</p>
+                <Button />
+            </div>
         </div>
     );
 }

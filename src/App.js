@@ -23,7 +23,7 @@ function App() {
       {tourLs.length < 1 ? <Loading /> :
         <main>
           <Header />
-          <Cards />
+          <Cards tourLs={tourLs} />
         </main>}
     </div>
   )
