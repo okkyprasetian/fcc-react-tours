@@ -109,3 +109,50 @@ header #slash {
     background-color: var(--orange-cm);
     cursor: pointer;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading h1 {
+    font-size: 4rem;
+    color: var(--orange-cm);
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 11px;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    .cardimage {
+        height: 250px;
+    }
+
+    .detail h2 {
+        font-size: 1.7rem;
+    }
+
+    .detail .info {
+        line-height: 1.5rem;
+    }
+
+    .div-btn {
+        height: 60px;
+    }
+
+    .div-btn .btn {
+        height: 20px;
+        font-weight: normal;
+    }
+
+    .loading h1 {
+        font-size: 2.5rem;
+    }
+}
