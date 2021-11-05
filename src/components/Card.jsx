@@ -13,18 +13,17 @@ function Card({ tour, onDeleteTour }) {
 
     return (
         <div className="card">
-            <div>
-                <img className="cardimage" src={tour.image} alt="" />
+            <div className="cardimage" style={{ backgroundImage: `url(${tour.image})`, backgroundPosition: 'center center' }}>
             </div>
             <div className="detail">
                 <div className="updetail">
                     <h2>{tour.name}</h2>
                     <p className="price">$ {tour.price}</p>
                 </div>
-                <p>
+                <p className="info">
                     {readmore ? tour.info : tour.info.slice(0, 200)}
                     {!readmore && '... '}
-                    <span onClick={toggleRead} className="readmore">{readmore ? 'Readless' : 'Read More'}</span>
+                    <span onClick={toggleRead} className="readmore">{readmore ? ' Read Less' : 'Read More'}</span>
                 </p>
             </div>
             <div className="div-btn">

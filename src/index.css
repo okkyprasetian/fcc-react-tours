@@ -19,7 +19,8 @@
 
 main {
     width: 45%;
-    margin: 0 auto 50px;
+    margin: 0 auto 0;
+    padding-bottom: 50px;
 }
 
 header {
@@ -32,13 +33,14 @@ header {
 
 header h1 {
     font-size: 4rem;
-    margin: 0;
+    color: var(--orange-cm)
 }
 
 header #slash {
     width: 200px;
     height: 5px;
-    background-color: blue;
+    margin-top: 5px;
+    background-color: var(--orange-cm);
 }
 
 .card {
@@ -49,28 +51,52 @@ header #slash {
 
 .cardimage {
     width: 100%;
+    height: 350px;
     border-radius: 10px 10px 0 0;
 }
 
 .detail {
-    padding: 20px 20px 0;
+    padding: 30px 20px 0 020px;
 }
 
 .detail .updetail {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.detail h2 {
+    font-size: 2rem;
+    color: var(--orange-dr)
 }
 
 .detail .price {
-    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgb(0, 224, 0);
+}
+
+.detail .info {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--orange-lg);
+}
+
+.readmore {
+    cursor: pointer;
+    color: var(--orange-dr);
 }
 
 .div-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 80px;
 }
 
 .div-btn .btn {
@@ -81,9 +107,5 @@ header #slash {
     font-weight: bold;
     letter-spacing: 1px;
     background-color: var(--orange-cm);
-}
-
-.readmore {
     cursor: pointer;
-    color: blue;
 }
