@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-// import Loading from './components/Loading'
+import Loading from './components/Loading'
 import Header from './components/Header'
 import Cards from './components/Cards'
 import './App.css';
@@ -20,8 +20,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Cards />
+      {tourLs.length < 1 ? <Loading /> :
+        <main>
+          <Header />
+          <Cards />
+        </main>}
     </div>
   )
 }
