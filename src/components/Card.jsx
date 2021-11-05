@@ -1,6 +1,16 @@
+import { useState } from "react"
 import Button from "./Button"
 
 function Card({ tour, onDeleteTour }) {
+
+    // state
+    const [readmore, SetReadmore] = useState(false)
+
+    // Set State
+    const toggleRead = () => {
+        SetReadmore(!readmore)
+    }
+
     return (
         <div className="card">
             <div>
@@ -9,8 +19,14 @@ function Card({ tour, onDeleteTour }) {
             <div>
                 <h2>{tour.name}</h2>
                 <p>{tour.price}</p>
-                <p>{tour.info}</p>
-                <Button onDeleteTour={onDeleteTour} tId={tour.id} />
+                <p>
+                    {readmore ? tour.info : tour.info.split(' ').slice(0, 30).join(' ')}
+                    {!readmore && ' ... '}
+                    <span onClick={toggleRead} className="readmore">{readmore ? 'Readless' : 'Read More'}</span>
+                </p>
+                <div className="div-btn">
+                    <Button onDeleteTour={onDeleteTour} tId={tour.id} />
+                </div>
             </div>
         </div>
     );

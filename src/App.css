@@ -11,3 +11,8 @@
 .cardimage {
   width: 400px;
 }
+
+.readmore {
+  cursor: pointer;
+  color: blue;
+}
